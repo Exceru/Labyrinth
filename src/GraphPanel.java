@@ -12,6 +12,8 @@ public class GraphPanel extends JPanel {
     @Serial
     private static final long serialVersionUID = 6481890334304291711L;
 
+    ForceDirectedGraph fdg;
+
     private final Point startEnd;
     private Graph graph;
     //private final List<Point> drawnPoints;
@@ -29,6 +31,27 @@ public class GraphPanel extends JPanel {
         this.windowSize = new Point(1800, 1000);
 
         this.setPreferredSize(new Dimension(windowSize.x,windowSize.y));
+
+
+
+        fdg = new ForceDirectedGraph();
+
+        for(int i = 0; i < graph.getNumVertices(); i++) {
+
+            fdg.add(new Node(i + 1, 4));
+        }
+
+        for(int i = 0; i < graph.getNumVertices(); i++) {
+
+            for(int j = 0; j < graph.getNeighbours(i).size(); j++) {
+                fdg.addEdge(i + 1, graph.getNeighbours(i).get(j) + 1, 10.0);
+            }
+        }
+
+        fdg.initializeNodeLocations();
+
+
+
     }
 
     // TODO: Maybe unnecessary?
@@ -103,9 +126,15 @@ public class GraphPanel extends JPanel {
 
         g2.setFont(new Font(g2.getFont().getFontName(), Font.PLAIN, 16));
 
-        drawnPoints.put(0, new Point(50, 50));
+
+        fdg.draw(g2);
+
+
+        /*drawnPoints.put(0, new Point(50, 50));
         g2.setColor(Color.BLACK);
         g2.drawString(String.valueOf(1), 50, 50);
+
+
 
 
         // Calculate and place all vertex position.
@@ -154,5 +183,6 @@ public class GraphPanel extends JPanel {
             g2.drawString(String.valueOf(i+1), vertexPosition.x - 5, vertexPosition.y + 5);
         }
 
+*/
     }
 }

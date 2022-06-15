@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="828362db-5f24-4b7a-825b-4e9cfc575a19" name="Changes" comment="Add Screen and GraphPanel visualization class">
-      <change afterPath="$PROJECT_DIR$/labyrinth-1.graph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labyrinth-2.graph" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GraphLoader.java" afterDir="false" />
+    <list default="true" id="828362db-5f24-4b7a-825b-4e9cfc575a19" name="Changes" comment="Add random locations for vertex positions in graph">
+      <change afterPath="$PROJECT_DIR$/src/ForceDirectedGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraphPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Screen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,8 @@
       <workItem from="1655036277251" duration="2746000" />
       <workItem from="1655141996647" duration="2531000" />
       <workItem from="1655204252345" duration="14190000" />
-      <workItem from="1655291491596" duration="944000" />
+      <workItem from="1655291491596" duration="1241000" />
+      <workItem from="1655327356332" duration="6011000" />
     </task>
     <task id="LOCAL-00001" summary="Add base">
       <created>1655036415308</created>
@@ -131,7 +132,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655214620175</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add Graph Loader and loadable graph files">
+      <created>1655293130359</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655293130359</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add random locations for vertex positions in graph">
+      <created>1655293171630</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655293171630</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,15 +168,17 @@
     <MESSAGE value="Add Graph class contents" />
     <MESSAGE value="Add graph class functionality" />
     <MESSAGE value="Add Screen and GraphPanel visualization class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Screen and GraphPanel visualization class" />
+    <MESSAGE value="Add Graph Loader and loadable graph files" />
+    <MESSAGE value="Add random locations for vertex positions in graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add random locations for vertex positions in graph" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GraphLoader.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/GraphPanel.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
