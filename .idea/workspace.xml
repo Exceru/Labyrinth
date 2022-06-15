@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="828362db-5f24-4b7a-825b-4e9cfc575a19" name="Changes" comment="fixup! Add Screen and GraphPanel visualization class">
-      <change afterPath="$PROJECT_DIR$/src/GraphPanel.java" afterDir="false" />
+    <list default="true" id="828362db-5f24-4b7a-825b-4e9cfc575a19" name="Changes" comment="Add Screen and GraphPanel visualization class">
+      <change afterPath="$PROJECT_DIR$/labyrinth-1.graph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labyrinth-2.graph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GraphLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GraphPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +49,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julien\IdeaProjects\Labyrinth" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -74,7 +79,8 @@
       <workItem from="1655027842575" duration="738000" />
       <workItem from="1655036277251" duration="2746000" />
       <workItem from="1655141996647" duration="2531000" />
-      <workItem from="1655204252345" duration="10206000" />
+      <workItem from="1655204252345" duration="14190000" />
+      <workItem from="1655291491596" duration="944000" />
     </task>
     <task id="LOCAL-00001" summary="Add base">
       <created>1655036415308</created>
@@ -104,7 +110,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655214269617</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Screen and GraphPanel visualization class">
+      <created>1655214585754</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655214585754</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Screen and GraphPanel visualization class">
+      <created>1655214603690</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655214603690</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add Screen and GraphPanel visualization class">
+      <created>1655214620175</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655214620175</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,5 +154,16 @@
     <MESSAGE value="Add graph class functionality" />
     <MESSAGE value="Add Screen and GraphPanel visualization class" />
     <option name="LAST_COMMIT_MESSAGE" value="Add Screen and GraphPanel visualization class" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GraphLoader.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
