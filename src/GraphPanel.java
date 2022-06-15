@@ -40,21 +40,42 @@ public class GraphPanel extends JPanel {
         this.graph = graph;
     }
 
+    // TODO: Force directed graph solution is definitely needed! RANDOM LOCATIONS NOT READABLE.
     private Point calculateVertexPosition(int currentVertex) {
         // TODO Calculate according to window size
         int diagonal = (int) Math.sqrt(Math.pow(windowSize.x, 2) + Math.pow(windowSize.y, 2));
         int length = diagonal / graph.getNumVertices();
+
+        length = 200;
+        int gridWidth = 80;
+
 
         int x;
         int y;
 
         do {
             // TODO Seeded approach would be better
-            double angle = Math.toRadians(ThreadLocalRandom.current().nextInt(0, 90 + 1));
-            x = (drawnPoints.get(currentVertex - 1).x + (int)(length * Math.sin(angle)));
-            y = (drawnPoints.get(currentVertex - 1).y + (int)(length * Math.cos(angle)));
+            double angle = Math.toRadians(ThreadLocalRandom.current().nextInt(-90, 180 + 1));
+            //x = (drawnPoints.get(currentVertex - 1).x + (int)(length * Math.sin(angle)));
+            //y = (drawnPoints.get(currentVertex - 1).y + (int)(length * Math.cos(angle)));
 
-        } while(x > windowSize.x - 40 || x < 40 || y > windowSize.y - 40 || y < 40);
+            x = ThreadLocalRandom.current().nextInt(40, 1800-40);
+            y = ThreadLocalRandom.current().nextInt(40, 1000-40);
+
+
+
+            x = Math.round(x / gridWidth) * gridWidth;
+            y = Math.round(y / gridWidth) * gridWidth;
+
+
+
+
+
+        } while(x > windowSize.x - 40 || x < 40 || y > windowSize.y - 40 || y < 40 || drawnPoints.containsValue(new Point(x, y)));
+
+
+        //x = x + ThreadLocalRandom.current().nextInt(-20, 20 + 1);
+        //y = y + ThreadLocalRandom.current().nextInt(-20, 20 + 1);
 
 
         return new Point(x,y);
@@ -117,7 +138,7 @@ public class GraphPanel extends JPanel {
         }
 
         int diagonal = (int) Math.sqrt(Math.pow(windowSize.x, 2) + Math.pow(windowSize.y, 2));
-        int vertexSize = Math.min(diagonal / getGraph().getNumVertices(), 100);
+        int vertexSize = Math.min(diagonal / getGraph().getNumVertices() + 20, 100);
 
         // Then draw the vertices themselves.
         for (int i = 0; i < this.graph.getNumVertices(); i++) {
