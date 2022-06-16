@@ -86,6 +86,7 @@ public class Node {
         return diameter;
     }
 
+
     public void draw(Graphics2D g){
         g.setColor(Color.WHITE);
         g.fillOval((int) (this.x - (diameter / 2)), (int) (this.y - (diameter / 2)), (int) diameter, (int) diameter);
@@ -94,7 +95,17 @@ public class Node {
         g.drawOval((int) (this.x - (diameter / 2)), (int) (this.y - (diameter / 2)), (int) diameter, (int) diameter);
 
         g.setColor(Color.BLACK);
-        g.drawString(String.valueOf(id), (int) (this.x - 5), (int) (this.y + 5));
+        g.setFont(new Font("TimesRoman", Font.PLAIN, (int) (10.0 * (diameter / 20.0)))); // Scale font with size of vertex
+
+        int textWidth = (int) g.getFontMetrics().getStringBounds(String.valueOf(id), g).getWidth();
+
+        int x = (int) (this.x  - textWidth / 2);
+        int y = (int) (this.y  + g.getFontMetrics().getMaxAscent() / 2);
+
+
+
+        g.drawString(String.valueOf(id), x, y);
+
     }
 
     //@Override

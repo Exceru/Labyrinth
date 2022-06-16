@@ -23,12 +23,10 @@ public class GraphLoader {
         try(BufferedReader br = new BufferedReader(new FileReader(this.name))) {
             for(String line; (line = br.readLine()) != null; ) {
 
-                String coords[] = line.split(" ");
+                String[] coords = line.split(" ");
                 points.add(new Point(Integer.parseInt(coords[0]), Integer.parseInt(coords[1])));
                 System.out.println(points.get(points.size() - 1));
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
