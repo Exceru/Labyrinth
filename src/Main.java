@@ -11,8 +11,6 @@ public class Main {
         Screen s = new Screen(g, new Point(0, 131));
 
 
-
-
         s.run();
     }
 }

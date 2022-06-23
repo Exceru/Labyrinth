@@ -25,7 +25,7 @@ public class LabyrinthSolver {
     /**
      * List of all the paths leading from start to end.
      */
-    private List<Stack<Integer>> paths;
+    private List<List<Integer>> paths;
 
     /**
      * Constructor for the class to solve a labyrinth.
@@ -47,7 +47,7 @@ public class LabyrinthSolver {
         Stack<Integer> path = new Stack<>();
         searchForVertex(startVertex, path);
 
-        for (Stack<Integer> visited : paths) {
+        for (List<Integer> visited : paths) {
             if (!visited.isEmpty()) {
                 System.out.println(visited);
             }
@@ -64,8 +64,7 @@ public class LabyrinthSolver {
         if (!visited.contains(vertex)) {
             visited.push(vertex);
             if (vertex == endVertex) {
-                System.out.println(visited);
-                paths.add(visited);
+                paths.add(new ArrayList<>(visited));
             } else {
                 for (Integer neighbour : graph.getNeighbours(vertex)) {
                     searchForVertex(neighbour, visited);
